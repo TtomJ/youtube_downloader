@@ -3,22 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <title>YouTube Downloader</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h2>YouTube Video/Audio Downloader</h2>
-    <form method="post">
-        <input type="text" name="url" placeholder="Enter YouTube URL" required>
-        <br><br>
-        <label>
-            <input type="radio" name="choice" value="video" checked> Video
-        </label>
-        <label>
-            <input type="radio" name="choice" value="audio"> Audio
-        </label>
-        <br><br>
-        <button type="submit">Download</button>
-    </form>
+    <div class="container mt-5">
+        <h2 class="text-center">YouTube Video/Audio Downloader</h2>
+        <form method="post" class="mt-4">
+            <div class="form-group">
+                <input type="text" name="url" class="form-control" placeholder="Enter YouTube URL" required>
+            </div>
+            <div class="form-group form-check form-check-inline">
+                <label class="form-check-label">
+                    <input type="radio" name="choice" value="video" class="form-check-input" checked> Video
+                </label>
+                <label class="form-check-label ml-3">
+                    <input type="radio" name="choice" value="audio" class="form-check-input"> Audio
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Download</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
